@@ -22,7 +22,7 @@ const persistConfig = {
   whitelist: ['token'],
 };
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     auth: persistReducer(persistConfig, authReducer),
     books: bookReducer,
