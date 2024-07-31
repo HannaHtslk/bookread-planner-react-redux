@@ -6,9 +6,10 @@ export const registerUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await projectApi.post('/auth/register', userData);
+      setToken(response.data.token);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response.message);
     }
   }
 );
@@ -21,7 +22,7 @@ export const loginUser = createAsyncThunk(
       setToken(response.data.token);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response.message);
     }
   }
 );
@@ -34,7 +35,24 @@ export const logoutUser = createAsyncThunk(
       clearToken();
       return;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response.message);
+    }
+  }
+);
+
+export const refreshThunk = createAsyncThunk(
+  'auth/refresh',
+  async (_, thunkApi) => {
+    const token = thunkApi.getState().auth.token;
+    if (!token) {
+      return thunkApi.rejectWithValue('No token exist!');
+    }
+    setToken(token);
+    try {
+      const { data } = await goitApi.get('/users/current');
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
     }
   }
 );
