@@ -41,7 +41,9 @@ const LoginForm = () => {
         >
           <Form className={s.form}>
             <div className={s.wrapper}>
-              <label htmlFor={emailFieldId}>Email</label>
+              <label className={s.lab} htmlFor={emailFieldId}>
+                Email
+              </label>
               <Field
                 className={s.input}
                 type="email"
@@ -51,7 +53,9 @@ const LoginForm = () => {
               <ErrorMessage className={s.error} name="email" component="span" />
             </div>
             <div className={s.wrapper}>
-              <label htmlFor={passwordFieldId}>Password</label>
+              <label className={s.lab} htmlFor={passwordFieldId}>
+                Password
+              </label>
               <Field
                 className={s.input}
                 type="text"
@@ -65,7 +69,7 @@ const LoginForm = () => {
               />
             </div>
             <div className={s.login}>
-              <p>Do not have an account? </p>
+              <p className={s.lab}>Do not have an account? </p>
               <NavLink className={s.link} to="/register">
                 Register
               </NavLink>
