@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import NotFound from './pages/NotFoundPage/NotFound';
 import { refreshUser } from './redux/auth/operations';
 import { selectIsRefreshing } from './redux/auth/slice';
+import PlanningPage from './pages/PlanningPage/PlanningPage';
 
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -34,6 +35,7 @@ function App() {
       >
         <Route index element={<HomePage />} />
         <Route path="books" element={<BookPage />} />
+        <Route path="planer" element={<PlanningPage />} />
       </Route>
       <Route
         path="/register"

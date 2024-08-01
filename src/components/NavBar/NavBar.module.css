@@ -1,6 +1,53 @@
 .container {
-  padding: 10px 15px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background-color: rgba(128, 128, 128, 0.447);
+  padding: 10px 20px;
+  background-color: #000;
+  color: #0ff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.logo {
+  font-size: 36px;
+  color: #f0f;
+  text-decoration: none;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container nav {
+  display: flex;
+  gap: 50px;
+}
+
+.link {
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.active {
+  color: #f0f;
+}
+
+.link:hover {
+  color: #f0f;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 20px 40px;
+  }
 }

@@ -8,12 +8,15 @@ import { selectUser } from '../../redux/auth/slice';
 const UserMenu = () => {
   const username = useSelector(selectUser);
 
+  const letter = username.slice(0, 1);
   const dispatch = useDispatch();
   return (
     <div className={s.wrapper}>
-      <h2 className={s.title}>Welcome, {username}</h2>
+      <h2 className={s.title}>
+        <span>{letter}</span> {username}
+      </h2>
       <button onClick={() => dispatch(logoutUser())} className={s.btn}>
-        Logout
+        logout
       </button>
     </div>
   );

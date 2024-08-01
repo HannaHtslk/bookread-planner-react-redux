@@ -1,7 +1,7 @@
 import s from './NavBar.module.css';
 
 import clsx from 'clsx';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import UserMenu from '../UserMenu/UserMenu';
 
 const NavBar = () => {
@@ -10,9 +10,12 @@ const NavBar = () => {
   };
   return (
     <header className={s.container}>
-      <nav className={s.container}>
-        <NavLink to="/" className={activeClass}>
-          Home
+      <Link className={s.logo} to="/">
+        BR
+      </Link>
+      <nav>
+        <NavLink to="/planer" className={activeClass}>
+          Planer
         </NavLink>
 
         <NavLink to="/books" className={activeClass}>
