@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #000; /* Black background for neon effect */
-  color: #fff; /* White text color */
+  background-color: #000;
+  color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  height: 100vh; /* Full height */
+  height: 100vh;
 }
 
 .form {
@@ -25,7 +25,7 @@
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #0ff; /* Neon cyan */
+  color: #0ff;
 }
 .lab {
   font-family: 'Permanent Marker', cursive;
@@ -42,26 +42,26 @@
   font-style: normal;
   font-size: 16px;
   padding: 10px;
-  border: 2px solid #0ff; /* Neon cyan border */
+  border: 2px solid #0ff;
   box-shadow: 0 0 8px #0ff;
   border-radius: 4px;
   background-color: #000;
-  color: #0ff; /* Neon cyan text */
+  color: #0ff;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input:focus {
-  border-color: #f0f; /* Neon pink */
+  border-color: #f0f;
   outline: none;
   box-shadow: 0 0 8px #f0f;
   background-color: transparent;
 }
 
 .error {
-  color: #f00; /* Neon red */
+  color: #f00;
   font-size: 0.875em;
   position: absolute;
-  bottom: -20px; /* Positioned right below the input */
+  bottom: -20px;
   left: 0;
   font-family: 'Syne Mono', monospace;
   font-weight: 400;
@@ -76,7 +76,7 @@
 }
 
 .link {
-  color: #0ff; /* Neon cyan */
+  color: #0ff;
   text-decoration: none;
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
@@ -98,19 +98,18 @@
   font-size: 16px;
   margin-top: 20px;
   border-radius: 4px;
-  background-color: #0ff; /* Neon cyan */
-  color: #000; /* Black text for contrast */
+  background-color: #0ff;
+  color: #000;
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-  background-color: #f0f; /* Neon pink */
+  background-color: #f0f;
   box-shadow: 0 0 8px #f0f;
 }
 
-/* Tablet styles */
 @media (min-width: 768px) {
   .container {
     padding: 30px;
@@ -121,7 +120,6 @@
   }
 }
 
-/* Desktop styles */
 @media (min-width: 1280px) {
   .container {
     padding: 40px;
