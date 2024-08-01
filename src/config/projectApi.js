@@ -5,11 +5,3 @@ const projectApi = axios.create({
 });
 
 export default projectApi;
-
-export const setToken = token => {
-  projectApi.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
-
-export const clearToken = () => {
-  projectApi.defaults.headers.common.Authorization = '';
-};

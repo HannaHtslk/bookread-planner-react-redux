@@ -8,7 +8,7 @@ const initialState = {
   },
   isAuthenticated: false,
   loading: false,
-  error: null,
+  error: false,
   token: null,
   isRefreshing: false,
 };
@@ -16,6 +16,12 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  selectors: {
+    selectUser: state => state.user.name,
+    selectToken: state => state.token,
+    selectIsAuthenticated: state => state.isAuthenticated,
+    selectIsRefreshing: state => state.isRefreshing,
+  },
 
   extraReducers: builder => {
     builder
@@ -63,5 +69,10 @@ const authSlice = createSlice({
       });
   },
 });
-
+export const {
+  selectIsAuthenticated,
+  selectIsRefreshing,
+  selectToken,
+  selectUser,
+} = authSlice.selectors;
 export default authSlice.reducer;

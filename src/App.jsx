@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsRefreshing } from './redux/auth/selectors';
+
 import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import PrivateRoute from './routes/PrivateRoute';
@@ -11,6 +11,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import NotFound from './pages/NotFoundPage/NotFound';
 import { refreshUser } from './redux/auth/operations';
+import { selectIsRefreshing } from './redux/auth/slice';
 
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);

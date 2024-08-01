@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { Navigate } from 'react-router-dom';
-import { selectIsAuthenticated } from '../redux/auth/selectors';
+import { selectIsAuthenticated } from '../redux/auth/slice';
 
 const PublicRoute = ({ children }) => {
   const isLoggedIn = useSelector(selectIsAuthenticated);
