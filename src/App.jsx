@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import PrivateRoute from './routes/PrivateRoute';
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage/HomePage';
-import BookPage from './components/BookPage/BookPage';
+
 import PublicRoute from './routes/PublicRoute';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
@@ -13,6 +13,7 @@ import NotFound from './pages/NotFoundPage/NotFound';
 import { refreshUser } from './redux/auth/operations';
 import { selectIsRefreshing } from './redux/auth/slice';
 import PlanningPage from './pages/PlanningPage/PlanningPage';
+import BookPage from './pages/BookPage/BookPage';
 
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
