@@ -1,15 +1,3 @@
-body {
-  font-family: 'Caveat';
-  font-style: normal;
-  line-height: 1.5;
-  color: white;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: black;
-}
-
 h1,
 h2,
 h3,
@@ -29,4 +17,42 @@ ol {
 img {
   display: block;
   max-width: 100%;
+}
+
+:root {
+  --bg-color: #f7f2ef;
+  --text-color: #2e2e2e;
+  --accent-color: #5f7a8a;
+  --secondary-color: #8b9b74;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #d4cbc4;
+  --button-bg: #a6a29f32;
+  --button-text: #2e2e2e;
+}
+
+[data-theme='dark'] {
+  --bg-color: #010419;
+  --text-color: #e5e5e5;
+  /* --accent-color: #7697a0; */
+  --accent-color: #a6a29f;
+  --secondary-color: #a89b72;
+  --shadow-color: rgba(255, 255, 255, 0.08);
+  --border-color: #252a40;
+  --button-bg: #596274a1;
+  --button-text: #e5e5e5;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

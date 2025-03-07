@@ -3,17 +3,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #000;
-  color: #0ff;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+  background-color: transparent;
+
+  box-shadow: 0 0 8px var(--shadow-color);
 }
 
 .logo {
   font-size: 36px;
-  color: #f0f;
+  color: var(--accent-color);
   text-decoration: none;
-  font-family: 'Permanent Marker', cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -23,31 +22,30 @@
 }
 
 .link {
-  color: #0ff;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
 }
 
 .active {
-  color: #f0f;
+  color: var(--accent-color);
 }
 
 .link:hover {
-  color: #f0f;
+  color: var(--accent-color);
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 15px 30px;
+    padding: 10px 30px;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
-    padding: 20px 40px;
+    padding: 10px 40px;
   }
 }

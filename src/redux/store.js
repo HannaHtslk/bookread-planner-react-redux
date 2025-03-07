@@ -3,6 +3,7 @@ import authReducer from './auth/slice';
 import bookReducer from './books/slice';
 import planningReducer from './planning/slice';
 import userReducer from './user/slice';
+import themeReducer from './theme/slice';
 import {
   persistStore,
   persistReducer,
@@ -15,7 +16,13 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-const persistConfig = {
+const themePersistConfig = {
+  key: 'theme',
+  storage,
+  whitelist: ['mode'], // Persist only the "mode" property
+};
+
+const authPersistConfig = {
   key: 'auth',
   version: 1,
   storage,
@@ -24,7 +31,8 @@ const persistConfig = {
 
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(persistConfig, authReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
+    theme: persistReducer(themePersistConfig, themeReducer),
     books: bookReducer,
     planning: planningReducer,
     user: userReducer,

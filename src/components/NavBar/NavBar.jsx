@@ -22,6 +22,7 @@ const NavBar = () => {
           Books
         </NavLink>
       </nav>
+
       <UserMenu />
     </header>
   );

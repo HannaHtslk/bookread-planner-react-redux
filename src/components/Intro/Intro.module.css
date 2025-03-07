@@ -20,24 +20,17 @@
   }
 }
 
-.container {
-  padding: 10px 20px;
-
-  color: #f0f;
-}
-
 .title {
-  display: block;
+  display: inline-block;
   text-align: center;
 
   margin-bottom: 20px;
-  font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
 
-  text-shadow: 2px 2px 4px #f0f;
   animation: slideInLeft 1s ease-out forwards;
   font-size: 40px;
+  color: var(--text-color);
 }
 
 .block {
@@ -81,4 +74,15 @@
   .subtitle {
     font-size: 2rem;
   }
+}
+
+.btn {
+  display: flex;
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.container {
+  height: 100%;
 }
